@@ -26,7 +26,7 @@ if [[ -n $(git status --porcelain) ]]; then
 fi
 
 # Move onto the deploy branch and align it with main as the starting point.
-git fetch pages
+git fetch origin
 git checkout deploy 2>/dev/null || git checkout -b deploy
 git reset --hard main
 
@@ -50,5 +50,5 @@ fi
 # Commit and update the remote deploy branch.
 git add -A
 git commit -m "Deploy $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-git push --force-with-lease -u pages deploy
+git push --force-with-lease -u origin deploy
 git checkout main

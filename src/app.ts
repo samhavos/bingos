@@ -548,7 +548,7 @@ export function initializeApp(hints: QueryHints = {}): void {
           <label class="board__label" for="board-select">Board</label>
           <select class="board__select" id="board-select"></select>
           <span class="board__info" id="board-info"></span>
-          <a class="board__create-link" id="board-create-link" href="new.html">Create new board</a>
+          <a class="board__create-link" id="board-create-link" href="new/">Create new board</a>
         </div>
         <div class="board__grid-container">
           <div class="board__grid" id="board-grid" aria-busy="false"></div>
@@ -822,7 +822,7 @@ export function initializeApp(hints: QueryHints = {}): void {
       params.set("repo", `${repo.owner}/${repo.name}`);
     }
     const query = params.toString();
-    return query ? `new.html?${query}` : "new.html";
+    return query ? `new/?${query}` : "new/";
   }
 
   updateDarkMode(prefersDark.matches);

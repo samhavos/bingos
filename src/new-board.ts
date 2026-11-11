@@ -66,7 +66,7 @@ export function initializeNewBoardApp(hints: QueryHints = {}): void {
         <p class="create-board__subtitle">Add a new board to your data repository in three quick steps.</p>
       </div>
       <nav class="create-board__nav">
-        <a class="create-board__nav-link" href="index.html">Back to boards</a>
+        <a class="create-board__nav-link" href="../index.html">Back to boards</a>
       </nav>
     </header>
     <main class="create-board__main">
